@@ -44,44 +44,44 @@ const page = () => {
           <div className="py-8">
             <div className="flex justify-evenly flex-wrap px-24">
               <Capsule
-                pColor="yellow-500"
-                color="yellow-50"
+                pColor="yellow"
+                color="yellow"
                 icon={FaPen}
                 heading="পৰ্য্যালোচনা"
                 link="/review"
               />
 
               <Capsule
-                pColor="blue-500"
-                color="blue-50"
+                pColor="blue"
+                color="blue"
                 icon={FaBookOpen}
                 heading="প্ৰবন্ধ"
                 link="/blog"
               />
               <Capsule
-                pColor="orange-500"
-                color="orange-50"
+                pColor="orange"
+                color="orange"
                 icon={FaUserPen}
                 heading="সম্পাদকীয়"
                 link="/editorial"
               />
               <Capsule
-                pColor="green-500"
-                color="green-50"
+                pColor="green"
+                color="green"
                 icon={MdQuiz}
                 heading="কুইজ"
                 link="/quiz"
               />
               <Capsule
-                pColor="red-500"
-                color="red-50"
+                pColor="red"
+                color="red"
                 icon={FaBook}
                 heading="মাহেকীয়া প্ৰবন্ধ"
                 link="/monthwiseblog"
               />
               <Capsule
-                pColor="indigo-500"
-                color="indigo-50"
+                pColor="indigo"
+                color="indigo"
                 icon={FaPen}
                 heading="প্ৰতি সংখ্যাৰ বিশেষ"
                 link="/monthwiseblog"
