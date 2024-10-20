@@ -30,7 +30,7 @@ export default function BlogPage() {
             })
             .map((post) => (
               <Link
-          href={`/review/${post.slug}`}
+          href={`/review/${post.slug}`} key={post.slug}
           className="block bg-white rounded-lg shadow-xl hover:scale-105 transition-transform duration-500 w-[22rem] m-8"
         >
 

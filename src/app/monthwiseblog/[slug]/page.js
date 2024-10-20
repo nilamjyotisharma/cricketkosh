@@ -42,7 +42,7 @@ export default function MonthWiseBlogPage() {
         <div className="flex justify-evenly flex-wrap">
           {filteredBlogs.map((post) => (
               <Link
-          href={`/blog/${post.slug}`}
+          href={`/blog/${post.slug}`} key={post.slug}
           className="block bg-white rounded-lg shadow-xl hover:scale-105 transition-transform duration-500 w-[22rem] m-8"
         >
 
