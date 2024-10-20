@@ -4,6 +4,7 @@ import React from 'react';
 const Capsule = ({ pColor, color, icon: Icon, heading, link }) => {
   // Predefined mappings for the colors
   const bgColorClasses = {
+    yellow: 'bg-yellow-50',
     blue: 'bg-blue-50',
     orange: 'bg-orange-50',
     green: 'bg-green-50',
@@ -12,6 +13,7 @@ const Capsule = ({ pColor, color, icon: Icon, heading, link }) => {
   };
 
   const textColorClasses = {
+    yellow: 'text-yellow-500',
     blue: 'text-blue-500',
     orange: 'text-orange-500',
     green: 'text-green-500',
