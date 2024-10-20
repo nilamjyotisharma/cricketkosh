@@ -13,6 +13,7 @@ import { allBlogs } from "contentlayer/generated";
 import { allEditorials } from "contentlayer/generated";
 import { allReviews } from "contentlayer/generated";
 import { formatDate } from "./blog/[slug]/page";
+import Capsule from "./components/capsule";
 
 export const metadata = {
   title: "Home | Cricketkosh",
@@ -42,51 +43,49 @@ const page = () => {
 
           <div className="py-8">
             <div className="flex justify-evenly flex-wrap px-24">
-              <div className="flex items-center space-x-2 px-12 py-4 border-2 border-gray-100 rounded-lg bg-white my-4 mx-8 font-bold w-[20rem] justify-center h-18">
-                <div className="p-3 bg-yellow-50 rounded-full">
-                  <FaPen className="text-lg text-yellow-500" />
-                </div>
-                <h>পৰ্য্যালোচনা</h>
-                <h></h>
-              </div>
+              <Capsule
+                pColor="yellow-500"
+                color="yellow-50"
+                icon={FaPen}
+                heading="পৰ্য্যালোচনা"
+                link="/review"
+              />
 
-              <div className="flex items-center space-x-2 px-12 py-4 border-2 border-gray-100 rounded-lg bg-white my-4 mx-8 font-bold w-[20rem] justify-center h-18">
-                <div className="p-3 bg-blue-50 rounded-full">
-                  <FaBookOpen className="text-lg text-blue-500" />
-                </div>
-                <h>প্ৰবন্ধ</h>
-                <h></h>
-              </div>
-
-              <div className="flex items-center space-x-2 px-12 py-4 border-2 border-gray-100 rounded-lg bg-white my-4 mx-8 font-bold w-[20rem] justify-center h-18">
-                <div className="p-3 bg-orange-50 rounded-full">
-                  <FaUserPen className="text-lg text-orange-500" />
-                </div>
-                <h>সম্পাদকীয়</h>
-                <h></h>
-              </div>
-
-              <div className="flex items-center space-x-2 px-12 py-4 border-2 border-gray-100 rounded-lg bg-white my-4 mx-8 font-bold w-[20rem] justify-center h-18">
-                <div className="p-3 bg-green-50 rounded-full">
-                  <MdQuiz className="text-lg text-green-500" />
-                </div>
-                <h>কুইজ</h>
-                <h></h>
-              </div>
-              <div className="flex items-center space-x-2 px-12 py-4 border-2 border-gray-100 rounded-lg bg-white my-4 mx-8 font-bold w-[20rem] justify-center h-18">
-                <div className="p-3 bg-red-50 rounded-full">
-                  <FaBook className="text-lg text-red-500" />
-                </div>
-                <h>মাহেকীয়া প্ৰবন্ধ</h>
-                <h></h>
-              </div>
-              <div className="flex items-center space-x-2 px-12 py-4 border-2 border-gray-100 rounded-lg bg-white my-4 mx-8 font-bold w-[20rem] justify-center h-18">
-                <div className="p-3 bg-indigo-50 rounded-full">
-                  <FaPen className="text-lg text-indigo-500" />
-                </div>
-                <h className="text-center">প্ৰতি সংখ্যাৰ বিশেষ</h>
-                <h></h>
-              </div>
+              <Capsule
+                pColor="blue-500"
+                color="blue-50"
+                icon={FaBookOpen}
+                heading="প্ৰবন্ধ"
+                link="/blog"
+              />
+              <Capsule
+                pColor="orange-500"
+                color="orange-50"
+                icon={FaUserPen}
+                heading="সম্পাদকীয়"
+                link="/editorial"
+              />
+              <Capsule
+                pColor="green-500"
+                color="green-50"
+                icon={MdQuiz}
+                heading="কুইজ"
+                link="/quiz"
+              />
+              <Capsule
+                pColor="red-500"
+                color="red-50"
+                icon={FaBook}
+                heading="মাহেকীয়া প্ৰবন্ধ"
+                link="/monthwiseblog"
+              />
+              <Capsule
+                pColor="indigo-500"
+                color="indigo-50"
+                icon={FaPen}
+                heading="প্ৰতি সংখ্যাৰ বিশেষ"
+                link="/monthwiseblog"
+              />
             </div>
           </div>
         </div>
@@ -156,7 +155,6 @@ const page = () => {
             </div>
           </div>
         </div>
-
 
         <div className="py-24">
           <div className="px-24">
@@ -290,16 +288,14 @@ const page = () => {
           </div>
         </div>
 
-
-
         <div
-        className="bg-cover bg-center py-24"
-        style={{
-          backgroundImage: "url('/newsbg.png')",
-        }}
-      >
-        <div className="flex justify-center text-center px-44 items-center pt-16 pb-16">
-          {/* <div>
+          className="bg-cover bg-center py-24"
+          style={{
+            backgroundImage: "url('/newsbg.png')",
+          }}
+        >
+          <div className="flex justify-center text-center px-44 items-center pt-16 pb-16">
+            {/* <div>
             <Image
               className="w-[22rem] h-[30rem] -mt-24 rounded-full"
               src="/profile1.jpeg"
@@ -308,27 +304,25 @@ const page = () => {
               alt="No image found"
             />
           </div> */}
-          <div className="text-center text-[2.5rem] text-neutral-800 font-bold">
-            আপোনাৰ ইনবক্সত শ্ৰেষ্ঠ  {" "}
-            <span className="bg-yellow-500 bg-clip-text text-transparent">
-            প্ৰবন্ধ, গল্পসমূহ
-            </span>{" "}
-            লওক!
-            <br />
-            যোগাযোগ কৰক <br />
-            <br />
-            <div className="flex justify-center">
-            <Link href={"mailto:nilamjyotisharma2000@gmail.com"}>
-              <button className="text-2xl rounded-2xl px-12 py-4 bg-gradient-to-br from-yellow-600 to-yellow-300 text-white flex items-center gap-2 md:my-4 font-medium uppercase">
-                যোগাযোগ কৰক
-              </button>
-            </Link>
+            <div className="text-center text-[2.5rem] text-neutral-800 font-bold">
+              আপোনাৰ ইনবক্সত শ্ৰেষ্ঠ{" "}
+              <span className="bg-yellow-500 bg-clip-text text-transparent">
+                প্ৰবন্ধ, গল্পসমূহ
+              </span>{" "}
+              লওক!
+              <br />
+              যোগাযোগ কৰক <br />
+              <br />
+              <div className="flex justify-center">
+                <Link href={"mailto:nilamjyotisharma2000@gmail.com"}>
+                  <button className="text-2xl rounded-2xl px-12 py-4 bg-gradient-to-br from-yellow-600 to-yellow-300 text-white flex items-center gap-2 md:my-4 font-medium uppercase">
+                    যোগাযোগ কৰক
+                  </button>
+                </Link>
+              </div>
             </div>
-            
           </div>
         </div>
-      </div>
-
       </div>
     </BaseLayout>
   );
