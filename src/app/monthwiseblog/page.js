@@ -46,11 +46,9 @@ export default function BlogPage() {
               { month: "long" }
             );
             return (
-                
-
                 <div className="py-8">
                   <div className="flex justify-evenly flex-wrap px-24">
-                  <Link key={monthYear} href={`/monthwiseblog/${monthYear}`}>
+                  <Link href={`/monthwiseblog/${monthYear}`} key={monthYear}>
 
 
                   <div className="flex items-center space-x-2 px-12 py-4 border-2 border-gray-100 rounded-lg bg-white my-4 mx-8 font-bold w-[20rem] justify-between h-18">
